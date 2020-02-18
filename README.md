@@ -2,4 +2,5 @@
 Postgrade project
 
 #To-Do
-- [ ] Delete simple set Method
+- [X] Add simple set Method. 
+- [ ] Delete simple set Method.
