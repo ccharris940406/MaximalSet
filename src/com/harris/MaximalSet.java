@@ -10,8 +10,11 @@ public class MaximalSet extends TreeSet implements Comparable {
         Iterator it = this.iterator();
 
         for (Iterator iter = it; iter.hasNext(); ) {
-            TreeSet i = (TreeSet) iter.next();
-            System.out.println(i);
+            MaximalSet i = ((MaximalSet) iter.next());
+
+            if(i.containsAll(((TreeSet)o)) ) {
+                return true;
+            }
         }
         return false;
     }
@@ -24,6 +27,7 @@ public class MaximalSet extends TreeSet implements Comparable {
 
     @Override
     public int compareTo(Object o) {
+
         Integer result = Integer.compare(this.size(), ((MaximalSet)o).size());
 
         if(result == 0){

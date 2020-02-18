@@ -38,12 +38,13 @@ public class Main {
         System.out.println(set);
 
         simple = new MaximalSet();
-        simple.add(3);
         simple.add(6);
 
-        set.add(simple);
+        //set.add(simple);
         System.out.println(set);
-        ((MaximalSet) set).isSubSet(4);
+
+        System.out.println(((MaximalSet) set).isSubSet(simple));
+
 
     }
 }
