@@ -2,5 +2,6 @@
 Postgrade project
 
 # To-Do
-- [X] Add simple set Method. 
+- [ ] Add simple set Method. 
+  - [ ] When Add, remove the less simple set if uno contiene al otro.
 - [ ] Delete simple set Method.
