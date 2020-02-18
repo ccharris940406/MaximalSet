@@ -18,17 +18,6 @@ public class Main {
         set.add(simple);
         simple = null;
 
-        System.out.println(set);
-
-        simple = new MaximalSet();
-        simple.add(4);
-        simple.add(5);
-
-        set.add(simple);
-        simple = null;
-
-        System.out.println(set);
-
         simple = new MaximalSet();
         simple.add(1);
         simple.add(2);
@@ -36,15 +25,5 @@ public class Main {
         set.add(simple);
 
         System.out.println(set);
-
-        simple = new MaximalSet();
-        simple.add(6);
-
-        //set.add(simple);
-        System.out.println(set);
-
-        System.out.println(((MaximalSet) set).isSubSet(simple));
-
-
     }
 }
