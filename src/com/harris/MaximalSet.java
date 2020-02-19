@@ -21,11 +21,26 @@ public class MaximalSet extends TreeSet implements Comparable {
         return false;
     }
 
+    private void simplify(Object o){
+        if(o instanceof Integer){
+            return;
+        }
+
+        Iterator it = this.iterator();
+        for (Iterator iter = it; iter.hasNext();){
+            MaximalSet aux = (MaximalSet) iter.next();
+            if(((MaximalSet)o).containsAll(aux))
+                iter.remove();
+        }
+
+    }
+
     @Override
     public boolean add(Object o) {
         if(this.isSubSet(o)){
             return false;
         }
+        simplify(o);
         return super.add(o);
     }
 

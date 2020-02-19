@@ -1,5 +1,6 @@
 package com.harris;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -20,10 +21,32 @@ public class Main {
 
         simple = new MaximalSet();
         simple.add(1);
-        simple.add(2);
+        simple.add(4);
 
         set.add(simple);
 
+        simple = new MaximalSet();
+        simple.add(1);
+        simple.add(4);
+        simple.add(5);
+        set.add(simple);
+
+        simple = new MaximalSet();
+        simple.add(4);
+        simple.add(6);
+        set.add(simple);
+
+        simple = new MaximalSet();
+        simple.add(1);
+        simple.add(4);
+        simple.add(5);
+        simple.add(2);
+        simple.add(3);
+        simple.add(6);
+        set.add(simple);
+
+
         System.out.println(set);
+
     }
 }
