@@ -21,32 +21,39 @@ public class Main {
 
         simple = new MaximalSet();
         simple.add(1);
-        simple.add(4);
-
-        set.add(simple);
-
-        simple = new MaximalSet();
-        simple.add(1);
-        simple.add(4);
+        simple.add(2);
         simple.add(5);
         set.add(simple);
 
         simple = new MaximalSet();
-        simple.add(4);
+        simple.add(1);
+        simple.add(2);
         simple.add(6);
         set.add(simple);
 
+
+
+        //System.out.println(set);
+
         simple = new MaximalSet();
         simple.add(1);
-        simple.add(4);
-        simple.add(5);
         simple.add(2);
         simple.add(3);
+        simple.add(4);
+        simple.add(5);
         simple.add(6);
+
         set.add(simple);
+
+        simple = new MaximalSet();
+        simple.add(1);
+        simple.add(2);
 
 
         System.out.println(set);
+        ((MaximalSet)set).myRemove(simple);
+        System.out.println(set);
+
 
     }
 }

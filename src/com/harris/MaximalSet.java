@@ -1,6 +1,7 @@
 package com.harris;
 
 import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class MaximalSet extends TreeSet implements Comparable {
@@ -32,6 +33,37 @@ public class MaximalSet extends TreeSet implements Comparable {
             if(((MaximalSet)o).containsAll(aux))
                 iter.remove();
         }
+
+    }
+
+    public  void myRemove(Object o){
+
+        if(! (o instanceof MaximalSet)){
+            return;
+        }
+
+
+        MaximalSet auxThis = new MaximalSet();
+        Iterator it = this.iterator();
+        while (it.hasNext()) {
+            //System.out.println(this);
+            Set<Integer> aux = new MaximalSet();
+            aux = ((MaximalSet) it.next());
+
+            if (aux.containsAll(((MaximalSet) o))) {
+                for (Iterator iter = ((MaximalSet)o).iterator(); iter.hasNext(); ) {
+                    Set<Integer> aux_ = new MaximalSet();
+                    aux_.addAll(aux);
+                    aux_.remove(iter.next());
+                    auxThis.add(aux_);
+                }
+            }else {
+                auxThis.add(aux);
+            }
+        }
+
+        this.clear();
+        this.addAll(((MaximalSet)auxThis));
 
     }
 
